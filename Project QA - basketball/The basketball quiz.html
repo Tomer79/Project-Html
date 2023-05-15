@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>שאלון הכדורסל</title>
+        <link rel="stylesheet" href="css/style.css">
+    
+        <script>
+            function checkForm (){
+                var msg="";
+                var illegalchars=/[^a-zA-Zא-ת]/;
+                var illegalnum=/[^0-9\-]/;
+
+                //-----------------------//
+                // First name validation //
+                //-----------------------//
+
+                var Firstname=document.forms["contactForm"]["Firstname"].value;
+                if(Firstname=="")
+                {
+                    alert("First Name must be entered !!");
+                    return false;
+                }
+                if (Firstname.length<2)
+                {
+                    alert("First Name too short !!");
+                    return false;
+                }
+                if (illegalchars.test(Firstname))
+                {
+                    alert("First Name is illegal !!");
+                    return false;
+                }
+
+                //-----------------------//
+                // Last name validation //
+                //-----------------------//
+
+        
+                var Lastname=document.forms["contactForm"]["Lastname"].value;
+                if(Lastname=="")
+                {
+                    alert("Last Name must be entered !!");
+                    return false;
+                }
+                if (Lastname.length<2)
+                {
+                    alert("Lastname Name too short !!");
+                    return false;
+                }
+                if (illegalchars.test(Lastname))
+                {
+                    alert("Last Name is illegal !!");
+                    return false;
+                }
+
+
+                //-----------------------//
+                // ID_Number validation //
+                //-----------------------//
+                
+                var id_number=document.forms["contactForm"]["id_number"].value;
+                if(id_number.length<9 || id_number.length>9)
+                {alert("id_number length Is Illegal !!");
+                  return false;    
+                }
+
+                else if (id_number = "")
+                {alert("Please Insert ID Number !!");
+                return false;}
+
+
+
+                if(illegalnum.test(id_number))
+                {alert ( "id_number is illegal !!")
+                return false;    
+                }
+                
+            }//checkform()
+    
+    
+        </script>
+    </head>
+    <body>
+        <p><a href="Israel basketball league-main page.html">חזרה לדף ראשי - ליגת העל</a></p>
+        <h1>שאלון הכדורסל של תומר מאיר</h1>
+        <br/>
+        <div id="first">מיהו מלך הסלים הישראלי?</div>
+        <input type="radio" name="question 1" value="מיקי"><label class="labelQuiz">מיקי ברקוביץ</label>
+        <br>
+        <input type="radio" name="question 1" value="טל"><label class="labelQuiz">טל ברודי</label>
+        <br>
+        <input type="radio" name="question 1" value="מאיר"><label class="labelQuiz">מאיר טפירו</label>
+        <br>
+        <input type="radio" name="question 1" value="Doron"><label class="labelQuiz">דורון גמצ'י</label>
+        <br>
+        <br>
+        <div id="first">כמה קבוצות שיחקו בתחילת ליגת העל שיצאה לדרך?</div>
+        <input type="radio" name="question 2" value="6"><label class="labelQuiz">6</label>
+        <br>
+        <input type="radio" name="question 2" value="8"><label class="labelQuiz">8</label>
+        <br>
+        <input type="radio" name="question 2" value="7"><label class="labelQuiz">7</label>
+        <br>
+        <input type="radio" name="question 2" value="10"><label class="labelQuiz">10</label>
+        <br>
+        <br>
+        <div id="first">אילו שחקנים היו מעורבים בתקרית ה"אגרוף" בדרבי התל אביבי בסדרת הגמר?</div>
+        <input type="radio" name="question 3" value="דורון ושמעון"><label class="labelQuiz">דורון גמצ'י ושמעון אמסלם</label>
+        <br>
+        <input type="radio" name="question 3" value="לבן ועמוס"><label class="labelQuiz">לבן מרסר ועמוס פרישמן</label>
+        <br>
+        <input type="radio" name="question 3" value="מיקי ועמוס"><label class="labelQuiz">מיקי ברקוביץ ועמוס פרישמן</label>
+        <br>
+        <input type="radio" name="question 3" value="Lavan & Tomer"><label class="labelQuiz">לבן מרסר ותומר שטיינהאור</label>
+        <br>
+        <br>
+        <div id="first">איזה שחקן לא שיחק בהפועל ירושלים?</div>
+        <input type="radio" name="question 4" value="מיקי"><label class="labelQuiz">מיקי ברקוביץ</label>
+        <br>
+        <input type="radio" name="question 4" value="דורון"><label class="labelQuiz">דורון שפר</label>
+        <br>
+        <input type="radio" name="question 4" value="עדי"><label class="labelQuiz">עדי גורדון</label>
+        <br>
+        <input type="radio" name="question 4" value="Shimon"><label class="labelQuiz">שמעון אמסלם</label>
+        <br>
+        <br>
+        <div id="first">איזה מאמן לא זכה בגביע אירופה?</div>
+        <input type="radio" name="question 5" value="רלף"><label class="labelQuiz">רלף קליין</label>
+        <br>
+        <input type="radio" name="question 5" value="פיני"><label class="labelQuiz">פיני גרשון</label>
+        <br>
+        <input type="radio" name="question 5" value="Erez"><label class="labelQuiz">ארז אדלשטיין</label>
+        <br>
+        <input type="radio" name="question 5" value="דוויד"><label class="labelQuiz">דוויד בלאט</label>
+        <br>
+        <br>
+        <div id="first">מי אמר את המשפט המפורסם "אנחנו על המפה"?</div>
+        <input type="radio" name="question 6" value="מיקי"><label class="labelQuiz">מיקי ברקוביץ</label>
+        <br>
+        <input type="radio" name="question 6" value="דורון"><label class="labelQuiz">דורון שפר</label>
+        <br>
+        <input type="radio" name="question 6" value="פיני"><label class="labelQuiz">פיני גרשון</label>
+        <br>
+        <input type="radio" name="question 6" value="Tal"><label class="labelQuiz">טל ברודי</label>
+        <br>
+        <br>
+        <div id="first">באיזה אולם משחקת הפועל ירושלים?</div>
+        <input type="radio" name="question 7" value="הפחים"><label class="labelQuiz">אולם הפחים</label>
+        <br>
+        <input type="radio" name="question 7" value="יד אליהו"><label class="labelQuiz">יד אליהו</label>
+        <br>
+        <input type="radio" name="question 7" value="רוממה"><label class="labelQuiz">רוממה</label>
+        <br>
+        <input type="radio" name="question 7" value="Arena"><label class="labelQuiz">ארנה</label>
+        <br>
+        <br>
+        <div id="first">מתי הוקם מועדון מכבי תל אביב ובאיזה צבעים היו המדים?</div>
+        <input type="radio" name="question 8" value="1931"><label class="labelQuiz">1931, כחול וצהוב</label>
+        <br>
+        <input type="radio" name="question 8" value="1932"><label class="labelQuiz">1932, כחול ולבן</label>
+        <br>
+        <input type="radio" name="question 8" value="1928"><label class="labelQuiz">1928, כחול ואדום</label>
+        <br>
+        <input type="radio" name="question 8" value="1929"><label class="labelQuiz">1929, כחול ולבן</label>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form name="contactForm" method="POST" action="Israel basketball league-main page.html" 
+            onsubmit="return checkForm()">
+
+        <div id="first">מילוי פרטים אישיים:</div>
+                <div id="second"><input type="text" name="Firstname" size="10" /></div>
+                <div id="third"><input type="text" name="Lastname" id="Lastname" size="20" /></div>
+                <br>
+                <div id="second"><input type="text" name="id_number" value="" /></div>
+                <div id="third">
+                    <select name="city">
+                        <option value="Haifa">חיפה</option>
+                        <option value="Yoqneam">יוקנעם</option>
+                        <option value="Akko">עכו</option>
+                        <option value="Qiryat Ata" selected="selected">קרית אתא</option>
+                        <option value="Qiryat Biyalik">קרית ביאליק</option>
+                        <option value="Qiryat Haim">קרית חיים</option>
+                        <option value="Qiryat Yam">קרית ים</option>
+                        <option value="Qiryat Motzkin">קרית מוצקין</option>
+                </select>
+                <div id="second"><input type="submit" value="Send"></div>
+                <br>
+                </form>
+
+
+
+    </body>
